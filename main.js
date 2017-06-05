@@ -25,7 +25,7 @@ function px_to_number(p){  //ابتدا رشته ی p را بگیر
 
 }
 //**************************ok buttons********************************************************
-document.getElementById("ok_width").onclick=function(){set_width();} //ok baraye set kardane width va heighte rectangleha
+document.getElementById("ok_width").onclick=function(){set_width();}; //ok baraye set kardane width va heighte rectangleha
 function set_width(inner,main){  //the set width function sets the width of the main rectangle
     var inner=document.getElementById('inner'+n).style;
     var main=document.getElementById('main'+n).style;
@@ -43,7 +43,7 @@ document.getElementById("color_button").onclick=function(){  //in ghesmat baraye
     var color=document.border_form.input_color.value;
     inner.backgroundColor=color;
     set_pro(n,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,color);
-}
+};
 
 //***************************************************shorooe taksire main div *********************************
 var groupDIV=document.createElement("DIV");//yek div ijad mikonim
@@ -62,13 +62,13 @@ document.getElementById("new_rect").onclick=function(){
     set_width0();
 
 
-}
+};
 
 function set_width0(focus,n){  //modern set width   *******new**********//////////////
     if(E==false)
     {
 
-        z[x]="10px 20px 30px 40px / 50px 60px 70px 80px"
+        z[x]="10px 20px 30px 40px / 50px 60px 70px 80px";
         focus0[focus0.length]=false;
         var div0=document.createElement("DIV");
         var div1=document.createElement("DIV");
@@ -124,7 +124,7 @@ function set_width0(focus,n){  //modern set width   *******new**********////////
         main0.width=inner0.width;
         main0.height=inner0.height;
 
-        inner0.borderRadius=z[x]
+        inner0.borderRadius=z[x];
         inner0.opacity="1";
         inner0.position="absolute";
         main0.position="absolute";
@@ -154,8 +154,8 @@ function set_width0(focus,n){  //modern set width   *******new**********////////
         br_corner0.width="20px";
         br_corner0.height="20px";
         br_corner0.border="1px solid black";
-        br_corner0.right="0px"
-        br_corner0.bottom="0px"
+        br_corner0.right="0px";
+        br_corner0.bottom="0px";
         br_corner0.visibility="hidden";
 
         bl_corner0.position="absolute";
@@ -245,7 +245,7 @@ function set_pro(i,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a1
 
 }
 function new_array(i){
-    properties[properties.length]=new Array(i); //inja yek onsore jadid ijad mikonim yani yek araye bareye ye onsore jadid
+    properties[properties.length]= new Array(i); //inja yek onsore jadid ijad mikonim yani yek araye bareye ye onsore jadid
 }
 function get_pro(i){
     var obj={
@@ -273,7 +273,7 @@ function get_pro(i){
         color:properties[i][21],
         visibility:properties[i][22],
         z_index:properties[i][23]
-    }
+    };
     return obj;
 }
 
@@ -282,22 +282,24 @@ function get_pro(i){
 
 //****************************************payane taksire main div*******************************************
 function n8(a,b,c,d,e,f,g,h){  //function n8 gets 8 numbers and build a standars border-radius
-    a=number_to_px(a);
+            // این تابع 8 مقدار را می گیرد و یک بوردر رادیاس استاندارد به ما میدهد
+    // به این تابع 8 عدد داده می شود
+    a=number_to_px(a); // به این اعداد کاراکتر پیکسل رو اضافه می کند
     b=number_to_px(b);
     c=number_to_px(c);
     d=number_to_px(d);
-    var slash=" / ";
-    var space=" ";
-    a=a.concat(space);
+    var slash=" / "; //یک کاراکتر اسلش است
+    var space=" "; //یک فاصله ی خالی است
+    a=a.concat(space);// پس از مقدار a یک فاصله سفید قرار می دهد
     b=b.concat(space);
     c=c.concat(space);
-    var combine="";
-    combine=combine.concat(a);
+    var combine=""; //یک رشته ی تهی است
+    combine=combine.concat(a); // هر یک از مقادیر را بعلاوه ی یک اسلش به رشته ی تهی اضافه می کند
     combine=combine.concat(b);
     combine=combine.concat(c);
     combine=combine.concat(d);
     combine=combine.concat(slash);
-    e=number_to_px(e);
+    e=number_to_px(e);  // همان مراحل برای 4 عدد دوم هم انجام می شود.
     f=number_to_px(f);
     g=number_to_px(g);
     h=number_to_px(h);
@@ -308,7 +310,7 @@ function n8(a,b,c,d,e,f,g,h){  //function n8 gets 8 numbers and build a standars
     combine=combine.concat(f);
     combine=combine.concat(g);
     combine=combine.concat(h);
-    return combine;
+    return combine;// حالا این مقدار تولید شده برگردانده می شود.
 
 }
 
@@ -318,7 +320,7 @@ document.form1.elements[1].defaultValue="200px";//meghdare pishfarze width , hei
 
 var z=[];
 z[0]="20px 40px 60px 80px / 30px 50px 70px 90px"; // start of the border radius  --z is global ..
-inner.borderRadius=z //n8(60,50,80,50,30,42,65,25);
+inner.borderRadius=z; //n8(60,50,80,50,30,42,65,25);
 inner.opacity="0.65";
 
 //forms------borders---calculate-------------------------------------------
@@ -355,7 +357,7 @@ function set_form(){
     input_bottom=document.border_form.input_bottom;
     input_left=document.border_form.input_left;
     rotate_text=document.border_form.rotate_text; //rotate text bataye taiine meghdare rotate hast
-    border_wt=getted_rect.borderTop;;  											//border_wt yani : border top width  ..yani ghotre border top ..
+    border_wt = getted_rect.borderTop;  											//border_wt yani : border top width  ..yani ghotre border top ..
     border_wr=getted_rect.borderRight;//border_wr means : border right width ..yani ghotre border right ...
     border_wb=getted_rect.borderBottom;
     border_wl=getted_rect.borderLeft;
@@ -427,7 +429,7 @@ function set_form(){
             input_right.disabled=true;
             set_pro(n,-1,-1,-1,-1,false,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,true,-1,-1,-1,-1,-1);
         }
-    }
+    };
 
     btcheck.onclick=function(){   //btckeck means border top ckeck
         if(btcheck.checked){         //vaghti click mishe border top ro faal ya gheire faal mikone.
@@ -439,7 +441,7 @@ function set_form(){
             set_pro(n,-1,-1,-1,false,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,true,-1,-1,-1,-1,-1,-1,-1);
             btm.disabled=true;
         }
-    }
+    };
 
     bbcheck.onclick=function(){  //bbckeck means border bottom ckeck
         if(bbcheck.checked){
@@ -451,7 +453,7 @@ function set_form(){
             input_bottom.disabled=true;
             set_pro(n,-1,-1,-1,-1,-1,false,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,true,-1,-1,-1,-1,-1);
         }
-    }
+    };
     blcheck.onclick=function(){  //brckeck means border left ckeck
         if(blcheck.checked){
             inner.borderLeft=getted_rect.borderLeft+'px solid black';
@@ -462,7 +464,7 @@ function set_form(){
             input_left.disabled=true;
             set_pro(n,-1,-1,false,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,true,-1,-1,-1,-1,-1,-1,-1,-1);
         }
-    }
+    };
 
     rotate_check.onclick=function(){  //rotate ckeck yani ckeck boxe rotate ;;
         if(rotate_check.checked){
@@ -474,7 +476,7 @@ function set_form(){
             rotate_text.disabled=true;
             set_pro(n,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,true,false,-1,-1);
         }
-    }
+    };
     rotate_text.defaultValue=getted_rect.rotate;//meghdare avaliyeye rotate inja taiin mishe
     btm.defaultValue=getted_rect.borderTop; //meghdare avaliyeye border top inja ta`iin mishe
     btm.oninput=function(){
@@ -483,7 +485,7 @@ function set_form(){
         var conc=get1.borderTop+'px solid black';
         inner.borderTop=conc;
         console.log(get1);
-    }
+    };
     input_right.defaultValue=border_wr;//meghdare avaliyeye border right inja ta`iin mishe
     input_right.oninput=function(){
         set_pro(n,-1,-1,-1,-1,-1,-1,-1,-1,input_right.value,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1);
@@ -491,7 +493,7 @@ function set_form(){
         var conc=get1.borderRight+'px solid black';
         inner.borderRight=conc;
         console.log(conc)
-    }
+    };
 
     input_bottom.defaultValue=border_wb;//meghdare avaliyeye border bottom inja ta`iin mishe
     input_bottom.oninput=function(){
@@ -500,7 +502,7 @@ function set_form(){
         var conc=get1.borderBottom+'px solid black';
         inner.borderBottom=conc;
         console.log(conc)
-    }
+    };
     input_left.defaultValue=border_wl;//meghdare avaliyeye border left inja ta`iin mishe
     input_left.oninput=function(){
         set_pro(n,-1,-1,-1,-1,-1,-1,input_left.value,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1);
@@ -508,7 +510,7 @@ function set_form(){
         var conc=get1.borderLeft+'px solid black';
         inner.borderLeft=conc;
         console.log(conc)
-    }
+    };
     rotate_text.oninput=function(){
         set_pro(n,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,rotate_text.value,-1,-1,-1);
         var get1=get_pro(n);
@@ -594,7 +596,7 @@ function corner_analize(event,div,i2){
 
 
 
-        i=i2 //ctrue moshakhas konandeye arguman hast
+        i=i2; //ctrue moshakhas konandeye arguman hast
         var lastpos=get_mouse_pos(div,event,i);
 
 
@@ -726,8 +728,8 @@ tlc.onclick=function(evt){ //tlc means the div that is top-left corner
             document.removeEventListener('mousemove',start_get1,false);
         };
 
-    };
-}
+    }
+};
 trc.onclick=function(evt){ //trc means the div that is top-right corner
     if(!click_hand){          //mikhaim vaghti rooye daste click mishe ... ina gheire fa`al beshe
         var lastpos=get_mouse_pos(trc,evt,2);//,,,..masala vaghti clickhand true hast in ghesmat false beshe
@@ -737,7 +739,8 @@ trc.onclick=function(evt){ //trc means the div that is top-right corner
         document.onmouseup=function(){
             document.removeEventListener('mousemove',start_get2,false);
 
-        }												  	};
+        }
+    }
 };
 
 brc.onclick=function(evt){ //brc means the div that is bottom-right corner
@@ -749,7 +752,8 @@ brc.onclick=function(evt){ //brc means the div that is bottom-right corner
         document.onmouseup=function(){
             document.removeEventListener('mousemove',start_get3,false);
 
-        }												  	};
+        }
+    }
 };
 blc.onclick=function(evt){ //blc means the div that is bottom-left corner
     if(!click_hand){          //mikhaim vaghti rooye daste click mishe ... ina gheire fa`al beshe
@@ -760,7 +764,8 @@ blc.onclick=function(evt){ //blc means the div that is bottom-left corner
         document.onmouseup=function(){
             document.removeEventListener('mousemove',start_get4,false);
 
-        }												  	};
+        }
+    }
 };
 
 function start_get1(evt){
@@ -827,10 +832,10 @@ hand.onclick=function(){
         click_hand=true;
         document.body.style.cursor="hand"; //vaghti rooye click_hand click mishe cursor tabdil be hand(dast) mishe ..
     }
-    else{click_hand=false
+    else{click_hand=false;
         document.body.style.cursor="default";//vaghti click hand   false mishe .cursor tabdil be default mishe
     }
-}
+};
 
 group.addEventListener("mouseup",event_known);//hamashoon ye tabe ro ejra mikonand va oon tabe pardazesh ro anjam mide
 group.addEventListener("mousedown",event_known);
@@ -906,12 +911,12 @@ $("#delete").click(function(){      /////////////////hazfe mostatil ha .......jq
             //console.log(evt);
             $(id).mouseup(function(){
                 $(this).hide("slow");
-                del=false
+                del=false;
                 $("body").css("cursor","default");
             });}else if(b3=="group"){
             $(id).mouseup(function(){
                 //$(this).hide();
-                del=false
+                del=false;
                 $("body").css("cursor","default");
             });
         }
@@ -952,4 +957,4 @@ z_index.onclick=function(){
     var value=document.border_form.z_index.value;
     document.getElementById(id).style.zIndex=value;
     set_pro(n,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,value);
-}
+};
