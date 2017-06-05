@@ -15,7 +15,7 @@ var y1=25,y2=25,y3=25,y4=25;
 
 function number_to_px(a){
     var b=a.toString();
-    var c=b.concat("px");
+    var c=b.concat("px"); //خیلی راحت می شد مقدار px رو بهش اضافه کرد
     return c;
 }
 function px_to_number(p){
