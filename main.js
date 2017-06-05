@@ -314,16 +314,17 @@ function n8(a,b,c,d,e,f,g,h){  //function n8 gets 8 numbers and build a standars
 
 }
 
-
+//مقدار پیش فرض برای عرض و ارتفاع مستطیل اولیه است
 document.form1.elements[0].defaultValue="200px"; //meghdare pishfarze width , height
 document.form1.elements[1].defaultValue="200px";//meghdare pishfarze width , height
 
-var z=[];
+var z=[]; // یک آرایه و متغیر سراسری است که فعلا نمیدونم دقیقا چکار می کند
 z[0]="20px 40px 60px 80px / 30px 50px 70px 90px"; // start of the border radius  --z is global ..
 inner.borderRadius=z; //n8(60,50,80,50,30,42,65,25);
 inner.opacity="0.65";
 
 //forms------borders---calculate-------------------------------------------
+//این بخش خروجی را مشخص می کند. یعنی همان جا که اطلاعات خروجی چاپ می شود.
 var output=document.getElementById("output");//================output=============
 var position_o=document.createElement("DIV");
 var width_o=document.createElement("DIV");
@@ -338,7 +339,7 @@ var borderRight_o=document.createElement("DIV");
 var borderBottom_o=document.createElement("DIV");
 var rotate_o=document.createElement("DIV");
 
-output.appendChild(position_o);
+output.appendChild(position_o); //عناصر خروجی را در متغیر output قرار می دهد
 output.appendChild(width_o);
 output.appendChild(height_o);
 output.appendChild(left_o);
