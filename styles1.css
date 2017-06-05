@@ -1,0 +1,84 @@
+#new_rect{
+    position:absolute;
+    width:170px;
+    height:50px;
+    top:70px;
+}
+.color{
+    position:absolute;
+    width:70px;
+    text-align:center;
+    margin-left:4px;
+}
+.formstyle1{
+    width:60px;
+    text-align:center;
+}
+#properties{
+    top:125px;
+    position:absolute;
+    width:170px;
+    border:2px solid black;
+    background-color:#E8E8E8;
+}
+#hand{
+    position:absolute;
+    width:30px;
+    height:30px;
+    background-image:url(http://sbaloot.xzn.ir/ehsanjava/hand1.png);
+    background-repeat:no-repeat;
+    border:1px solid black;
+    top:20px;
+    background-color:white;
+}
+body{
+    background-image:url(http://sbaloot.xzn.ir/ehsanjava/light.png) ;
+}
+
+#border_form{
+    position:relative;
+    margin-left:0px;
+    top:0px;
+}
+.input_check{
+    position:relative;
+    width:30px;
+    text-align:center;
+    display:block;
+    margin-left:100px;
+    margin-top:-19px;
+}
+#group{
+    position:absolute;
+    border:3px solid transparent;
+    left:230px;
+    top:15px;
+    min-width:900px;
+    min-height:770px;
+    /*background-image:url(2.png);*/
+}
+#output{
+    width:300px;
+    min-height:120px;
+    position:absolute;
+    bottom:0px;
+    right:0px;
+    border:1px solid blue;
+    background-color:#E8E8E8;
+    z-index:1000;
+    padding:5px;
+}
+#delete{
+    position:absolute;
+    width:60px;
+    height:38px;
+    left:45px;
+    top:15px;
+}
+#rect{
+    position:absolute;
+    width:70px;
+    height:38px;
+    left:115px;
+    top:15px;
+}

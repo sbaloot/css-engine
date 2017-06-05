@@ -3,8 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+    <link rel="stylesheet" href="styles1.css">
+
+
 </head>
 <body>
+<div id="main" >
+    <div id="inner"></div>
+    <div id="tl_corner"></div>
+    <div id="tr_corner" ></div>
+    <div id="br_corner"></div>
+    <div id="bl_corner"></div>
+</div>
+<div id="hand"></div>
+<div id="properties">
+    <form action="" name="form1" method="get">
+        width:<input class="formstyle1" type="text" name="width"><br>
+        height:<input type="text"class="formstyle1" name="height"><br>
+        <input type="button" id="ok_width" name="ok_width" value="ok">
+
+
+    </form>
+    <form id="border_form" action="" name="border_form" method="get">
+        <input type="checkbox" name="border_top">border-top:<input type="text" class="input_check" name="btm"><br>
+        <input type="checkbox" name="border_bottom">border-bottom:<input type="text" class="input_check" name="input_bottom"><br>
+        <input type="checkbox" name="border_left">border-left:<input type="text" class="input_check" name="input_left"><br>
+        <input type="checkbox" name="border_right">border-right:<input type="text" class="input_check" name="input_right"><br>
+        <input type="checkbox" name="rotate_check">rotate:<input type="text" class="input_check" name="rotate_text"><br>
+        color:<input type="text" class="color" name="input_color"><br><input type="button" id="color_button" name="color_button" value="ok">
+        <br>z-index:<input type="text" id="z_index" class="input_check" name="z_index"><br><input type="button" id="z_index_ok" name="z_index_ok" value="ok">
+
+    </form>
+</div>
+<div id="output">
+</div>
+<button id="new_rect" type="button" >create new</button>
+<button id="delete" type="button" >delete</button>
+<button id="rect" type="button" >rectangle</button>
+
+<script src="main.js" ></script>
 
 </body>
 </html>
