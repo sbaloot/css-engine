@@ -538,7 +538,8 @@ var trc=document.getElementById("tr_corner");
 var brc=document.getElementById("br_corner");
 var blc=document.getElementById("bl_corner");
 
-
+//تابع زیر، درست ضد تابع n8 عمل می کند.
+//یعنی یک border-radius بهش می دهیم و 8 تا عدد به ما می دهد.
 function un8(a){ //un8 means un_n8  -ok-it works
     var b=a.split(" ");
     var x1=b[0];
