@@ -36,7 +36,14 @@ inner.borderRadius=z; //n8(60,50,80,50,30,42,65,25);
 inner.opacity="0.65";
 
 var rect,dif_x,dif_y;
-var click_hand=false;  //click hand haman dasti hast ke mikhaim vaghti roosh click shod betoonim main div ro harkat bedim
+
+
+// مقدار click_hand همان علامت دستی است که می خواهیم وقتی بر روی آن کلیک شدْ بتونیم main div رو حرکت بدیم
+// مقدار false یعنی بر روی علامت دست، کلیک نشده است
+var click_hand=false;
+
+
+
 var click_main_div=false; //click_main_div baraye ine ke befahmin rooye main div click shode ya na ...
 var hand=document.getElementById("hand"); //hand ye div hast ke alamate dast rooshe ..
 

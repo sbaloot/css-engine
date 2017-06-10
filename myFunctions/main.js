@@ -3,15 +3,21 @@
  */
 
 function corner_analize(event,div,i2){
+
+
+    //یعنی اگر بر روی علامت دست کلیک نشده است، کدهای زیر را اجرا کن
     if(click_hand==false)
     {
 
 
 
         i=i2; //ctrue moshakhas konandeye arguman hast
+
+        // اینجا میاد مختصات ماوس رو نسبت به گوشه ی بالا و سمت چپ مستطیل به ما می دهد
         var lastpos=get_mouse_pos(div,event,i);
 
 
+        // متغیر i آخرین آرگومانی است که به تابع corner_analize داده میشه
 
         if(i==1){
 

@@ -162,7 +162,7 @@ function set_width0(focus,n){
 
     }
 
-}
+}//پایان تابع set_width0
 
 group.addEventListener("click",set_n);//get n paiin tarif shode
 function set_n(evt){
