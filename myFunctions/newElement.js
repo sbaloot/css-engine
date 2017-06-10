@@ -30,16 +30,24 @@ function set_width0(focus,n){
     //مقدار false یعنی می خواهیم یک عنصر جدید ایجد کنیم
     if(E==false)
     {
-
+        // میاد در آرایه ی z عنصر x ام رو انتخاب می کنه و برابر با یک border-radius قرار میده.
+        //یه border-radius اولیه رو در اندیس x ام ذخیره می کنه.
         z[x]="10px 20px 30px 40px / 50px 60px 70px 80px";
+
+        //یعنی یک درایه ی جدید در آخر آرایه ی focus0 ایجاد کن و اون رو برابر با false قرار بده.
+        //مقدار false یعنی وقتی این مستطیل ایجاد میشه، فوکس نداشته باشه.
         focus0[focus0.length]=false;
+
+        // اینجا میام و شش تا عنصر div ایجاد می کنیم
         var div0=document.createElement("DIV");
         var div1=document.createElement("DIV");
         var div2=document.createElement("DIV");
         var div3=document.createElement("DIV");
         var div4=document.createElement("DIV");
         var div5=document.createElement("DIV");
-        console.log("x is:"+x);
+
+
+        //با استفاده از متغیر x به هریک از این عناصر div آی دی یکتایی اختصاص می دهیم.
         div0.setAttribute("id",'main'+x);
         div1.setAttribute("id",'inner'+x);
         div2.setAttribute("id",'tl_corner'+x);
@@ -47,27 +55,33 @@ function set_width0(focus,n){
         div4.setAttribute("id",'br_corner'+x);
         div5.setAttribute("id",'bl_corner'+x);
 
+        //تمامی عناصر div از شماره 1 تا 5 را در داخل div با شماره 0 قرار می دهیم
         div0.appendChild(div1);
         div0.appendChild(div2);
         div0.appendChild(div3);
         div0.appendChild(div4);
         div0.appendChild(div5);
+
+        //حالا div0 را در داخل عنصر به نام group قرار می دهیم
         group.appendChild(div0);
 
 
+        //حالا استایل های عناصر گوشه ای این عنصر را می گیریم
         tl_corner0=document.getElementById('tl_corner'+x).style;
         tr_corner0=document.getElementById('tr_corner'+x).style;
         br_corner0=document.getElementById('br_corner'+x).style;
         bl_corner0=document.getElementById('bl_corner'+x).style;
 
-        tlc0=document.getElementById('tl_corner'+x);//inja name 4 morabae gooshe ro moshakhas mikonim
+        // اینجا میام 4 عناصر گوشه ای رو می گیریم و در این متغیرها قرار می دهیم
+        tlc0=document.getElementById('tl_corner'+x);
         trc0=document.getElementById('tr_corner'+x);
         brc0=document.getElementById('br_corner'+x);
         blc0=document.getElementById('bl_corner'+x);
-        console.log("tlc id is:"+tlc0.id);
 
-        tlc0.onmousedown=function(event){corner_analize(event,tlc0,1)};  //inja baraye hat morabae gooshe yek shenevandeye rooydad tarif mikonim
-        trc0.onmousedown=function(event){corner_analize(event,trc0,2)}; //va mikhain ke ba click kardan roye oona tabe`e corner_analize ejra beshe
+        // اینجا برای هر عنصر گوشه ای، یک شنونده رویداد تعریف می کنیم
+        //و می خوایم با کلیک بر روی اونها، تابع corner_analize اجرا بشه
+        tlc0.onmousedown=function(event){corner_analize(event,tlc0,1)};
+        trc0.onmousedown=function(event){corner_analize(event,trc0,2)};
         brc0.onmousedown=function(event){corner_analize(event,brc0,3)};
         blc0.onmousedown=function(event){corner_analize(event,blc0,4)};
 

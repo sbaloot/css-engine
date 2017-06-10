@@ -45,7 +45,13 @@ var hand=document.getElementById("hand"); //hand ye div hast ke alamate dast roo
 var groupDIV=document.createElement("DIV");//yek div ijad mikonim
 groupDIV.setAttribute("id","group"); //id in div ro barabar ba group gharar midim
 document.body.appendChild(groupDIV); //in div ro be body ezafe mikonim
-var focus0=[]; //yek araye be name focus0 misazim
+
+
+// اندیس های این آرایه یک مقدار بولین هستند. که مشخص می کنند آیا یک مستطیل فوکس شده است یا نه.
+var focus0=[];
+
+
+
 var n=0;
 var x=0;//x is id of new main div m inner div
 var z=[];//z is last coordinate
