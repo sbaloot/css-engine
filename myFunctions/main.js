@@ -2,6 +2,8 @@
  * Created by ehsan on 05/06/2017.
  */
 
+
+//این تابع رویدادهای مربوط به کلیک بر روی گوشه ها رو تحلیل می کنه.
 function corner_analize(event,div,i2){
 
 
@@ -21,8 +23,8 @@ function corner_analize(event,div,i2){
 
         if(i==1){
 
-            lx1=lastpos.x;
-            ly1=lastpos.y;
+            lx1 = lastpos.x;
+            ly1 = lastpos.y;
 
             document.addEventListener('mousemove',start_get_analize,false);
             document.onmouseup=function(){
@@ -59,8 +61,11 @@ function corner_analize(event,div,i2){
     }
 }
 
+//این تابع محاسبات مربوط به تغییر border-radius ها رو انجام میده.
 function start_get_analize(event){
-    var mouse_pos=get_mouse_pos(main00,event,i);
+
+    var mouse_pos = get_mouse_pos(main00,event,i);
+
     if(E==false){
         var un=un8(z[x-1]);
     }

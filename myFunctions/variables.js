@@ -61,6 +61,9 @@ var focus0=[];
 
 var n=0;
 var x=0;//x is id of new main div m inner div
+
+
+// آرایه ی z آخرین مختصات رو دربر دارد
 var z=[];//z is last coordinate
 
 //متغیر E مشخص می کند که آیا بر روی یک عنصر ایجاد شده کلیک کرده ایم یا می خواهیم یک عنصر جدید ایجاد کنیم

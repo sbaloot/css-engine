@@ -11,7 +11,7 @@
 //کلا به نظر می رسه تابع get_mouse_pos مقدار x و y ماوس نسبت به گوشه ی سمت چپ و بالای مستطیل مورد نظر به ما می دهد
 function get_mouse_pos(div,evt,dn){
 
-    var rect=div.getBoundingClientRect();
+    var rect = div.getBoundingClientRect();
 
     // در صورتی که بر روی div شماره 1 کلیک شده باشد کارهای زیر رو انجام بده
     if(dn == 1){
@@ -20,23 +20,23 @@ function get_mouse_pos(div,evt,dn){
             //
             x:evt.clientX-rect.left,
             //
-            y:evt.clientY-rect.top,
+            y:evt.clientY-rect.top
         };
 
-    }else if(dn==2){
+    }else if(dn == 2){
         return{
             x:evt.clientX-rect.right,
-            y:evt.clientY-rect.top,
+            y:evt.clientY-rect.top
         };
-    }else if(dn==3){
+    }else if(dn == 3){
         return{
             x:-evt.clientX+rect.right,
-            y:-evt.clientY+rect.bottom,
+            y:-evt.clientY+rect.bottom
         };
-    }else if(dn==4){
+    }else if(dn == 4){
         return{
             x:evt.clientX-rect.left,
-            y:-evt.clientY+rect.bottom,
+            y:-evt.clientY+rect.bottom
         };
     }
 }

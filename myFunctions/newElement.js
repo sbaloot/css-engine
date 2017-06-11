@@ -164,6 +164,9 @@ function set_width0(focus,n){
 
 }//پایان تابع set_width0
 
+
+
+
 group.addEventListener("click",set_n);//get n paiin tarif shode
 function set_n(evt){
     get_n(evt);
@@ -192,12 +195,23 @@ function set_n(evt){
     }
 }
 
+//یک رویداد بهش می دهیم و شماره ی قرار گرفته پس از آی دی عنصری که بر روش کلیک شده رو به ما میده
 function get_n(evt){
+
+    //وقتی بر روی عنصر group کلیک می کنیم، رویدادش رو به این تابع می دیم.
+    //حالا با استفاده از رویداد، آی دی عنصری که بر روش کلیک شده رو به دست می آوریم.
     id=evt.srcElement.id;  //in ghesmat baraye joda kardane adad az text hast   ok ok ok ok ok ok
-    if(id!="group"){
+
+    // اگر آی دی ما برابر با group نباشه دستورات زیر رو اجرا می کنیم
+    if(id != "group"){
+        //به دنبال عدد قرار گرفته پس از آی دی group می گردد.
+        //مثلا رقم های عدد ۱۲ را تک تک برمی گرداند.
         n = id.match(/\d/g); //inja bayad bedoonim ke \d yani adadha...
+        //حالا این رقم ها را به هم می چسبانیم تا عدد به دست آید
         n= n.join("");
+        //حالا رشته را به عدد تبدیل می کنیم
         n=Number(n);
+
         getted_rect=get_pro(n);//tabee get_pro dar khate 280 hast ..
         console.log(n);
         set_form();
@@ -205,7 +219,7 @@ function get_n(evt){
     }else{
         n=-1; //mashkook _____________________________________________________________mashkook hast
     }
-
+    //مقدار n را برمی گرداند. 
     return n;
 }
 
