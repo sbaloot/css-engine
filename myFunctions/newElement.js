@@ -170,8 +170,9 @@ function set_width0(focus,n){
 group.addEventListener("click",set_n);//get n paiin tarif shode
 function set_n(evt){
 
-    //ا
-    get_n(evt);
+    /*var myElementNumber =*/ get_n(evt);
+
+
 
     if(focus0.length!=0 &&id!="group"){
         for(i=0;i<focus0.length;i++)
@@ -215,7 +216,7 @@ function get_n(evt){
         n=Number(n);
 
         getted_rect=get_pro(n);//tabee get_pro dar khate 280 hast ..
-        console.log(n);
+        //console.log(n);
         set_form();
         //baraye set kardane khosoosiyate be width , height , rorate , ...
     }else{

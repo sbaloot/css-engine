@@ -64,6 +64,10 @@ function corner_analize(event,div,i2){
 //این تابع محاسبات مربوط به تغییر border-radius ها رو انجام میده.
 function start_get_analize(event){
 
+
+
+
+
     var mouse_pos = get_mouse_pos(main00,event,i);
 
     if(E==false){

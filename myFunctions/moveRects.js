@@ -32,7 +32,30 @@ function set_time(evt){
     n= n.join("");
     n=Number(n);
     main_div=document.getElementById("main"+n);
+
 }
+
+function getCornerRectIdNumber(evt){
+
+    var id=evt.srcElement.id;
+
+    //console.log("my id is: "+id);
+
+    var n = id.match(/[0-9]/g);
+    n= n.join("");
+    n=Number(n);
+
+    return {
+        n: this.n,
+        id: this.id
+    }
+
+}
+
+
+
+
+
 
 
 function differ(evt){
@@ -53,10 +76,20 @@ function differ(evt){
 
 
 function event_known(evt){ //in tabe miad anvae event ha ro bar resi mikone ke age noesh folane folan kar ro mikone
+
+
+
     if(evt.type=="mousedown"){
+
+        var cornerElementNumber = getCornerRectIdNumber(evt);
+        console.log(cornerElementNumber);
+        elMouseDown(cornerElementNumber.n,cornerElementNumber.id);
         set_time(evt);
         differ(evt);
     }else if(evt.type=="mouseup"){
+        var cornerElementNumber2 = getCornerRectIdNumber(evt);
+        elMouseUp(cornerElementNumber2.n,cornerElementNumber2.id);
+
         click_main_div=false;
     }else if(evt.type=="mousemove"&&click_main_div==true){
         follow(evt);
