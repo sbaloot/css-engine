@@ -58,8 +58,10 @@ document.body.appendChild(groupDIV); //in div ro be body ezafe mikonim
 var focus0=[];
 
 
-
+//یه متغیر عمومی هست که ازش بعنوان ذخیره کننده ی شماره ی
 var n=0;
+
+
 var x=0;//x is id of new main div m inner div
 
 
@@ -70,5 +72,5 @@ var z=[];//z is last coordinate
 //مقدار false یعنی می خواهیم یک عنصر جدید ایجاد کنیم
 var E=false;
 
-
+//عنصر اصلی دربردارنده ی مستطیل ها است
 var group=document.getElementById("group");

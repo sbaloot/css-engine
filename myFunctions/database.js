@@ -26,7 +26,7 @@ function new_array(i){
     properties[properties.length]= new Array(i); //inja yek onsore jadid ijad mikonim yani yek araye bareye ye onsore jadid
 }
 function get_pro(i){
-    var obj={
+    var obj = {
         width:properties[i][0],
         height:properties[i][1],
         leftCheck:properties[i][2],

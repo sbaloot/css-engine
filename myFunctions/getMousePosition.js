@@ -9,13 +9,15 @@
 //top_left:1 , top_right:2 , bottom_right:3 , bottom_left:4 .
 
 //کلا به نظر می رسه تابع get_mouse_pos مقدار x و y ماوس نسبت به گوشه ی سمت چپ و بالای مستطیل مورد نظر به ما می دهد
+//مثلا اگر بر روی مربع بالا و سمت چپ کلیک شود و کلید ماوس نگه داشته شود آنگاه فاصله ی ماوس از ضلع سمت چپ مستطیل را به ما می دهد
 function get_mouse_pos(div,evt,dn){
 
     var rect = div.getBoundingClientRect();
 
     // در صورتی که بر روی div شماره 1 کلیک شده باشد کارهای زیر رو انجام بده
     if(dn == 1){
-
+        //var tt =  evt.clientX-rect.left;
+        //console.log("left distance is = "+tt);
         return{
             //
             x:evt.clientX-rect.left,

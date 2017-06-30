@@ -169,6 +169,8 @@ function set_width0(focus,n){
 
 group.addEventListener("click",set_n);//get n paiin tarif shode
 function set_n(evt){
+
+    //ا
     get_n(evt);
 
     if(focus0.length!=0 &&id!="group"){
@@ -219,7 +221,7 @@ function get_n(evt){
     }else{
         n=-1; //mashkook _____________________________________________________________mashkook hast
     }
-    //مقدار n را برمی گرداند. 
+    //مقدار n را برمی گرداند.
     return n;
 }
 
